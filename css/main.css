@@ -8,6 +8,11 @@ body {
     background-color: #000;
     color: #aaa;
     font: 15px/1.5 Arial, Helvetica, sans-serif;
+    /*
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    */
 }
 
 .main-container {
@@ -22,8 +27,29 @@ body {
     width: 90%;
     margin: auto;
     display: flex;
-    align-items: center;
+    /* flex-direction: row; row-reverse|column|column-reverse*/
+    /* flex-wrap: nowrap; wrap - columns from right go down
+                            |wrap-reverse - columns from rigt go up */
+    /* !!! */
+    /* flex-flow: <'flex-direction'> || <'flex-wrap'> shortheand both above 
+            e.g. flex-flow: row nowrap; */
+    /* !!! */
+    /*justify-content: flex-start; default; space-between|centre|... */        
+    /*align-items: baseline|flex-start|flex-end|center|stretch stretch verically*/
+    
+    /* this property has no effect when there is only one line of flex items */
+    /*align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe*/
+    
 
+}
+.column-8 {
+    width: 80%;
+}
+.column-6 {
+    width: 60%
+}
+.column-5 {
+    width: 50%;
 }
 
 .column-4 {
@@ -39,24 +65,20 @@ body {
 }
 
 header {
-    /*padding-top: 30px;*/
     min-height: 170px;
 }
 
-header div.container {
-    width: 90%;
-    overflow: hidden;
-    /*display: block;*/
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 header h1 {
     margin: 0;
-    padding-left: 3%;
-    font-size: 40px;
+    padding: 0;
 }
 
-nav {
-    padding: 0.5em;
-    height: auto;
+.main-content {
+    min-height: 400px;
 }
-
