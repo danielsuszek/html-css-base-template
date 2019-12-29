@@ -1,0 +1,62 @@
+*, *::before, *::after  {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #aaa;
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+    background-color: #454343; /* graphite */
+    width: 80%;
+    min-height: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+}
+
+.column-4 {
+    width: 40%;
+}
+
+.column-2 {
+    width: 20%;
+}
+
+.border {
+    border: 1px dotted #aaa;
+}
+
+header {
+    /*padding-top: 30px;*/
+    min-height: 170px;
+}
+
+header div.container {
+    width: 90%;
+    overflow: hidden;
+    /*display: block;*/
+}
+
+header h1 {
+    margin: 0;
+    padding-left: 3%;
+    font-size: 40px;
+}
+
+nav {
+    padding: 0.5em;
+    height: auto;
+}
+
