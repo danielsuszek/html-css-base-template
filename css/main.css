@@ -2,11 +2,15 @@
     box-sizing: border-box;
 }
 
+* {
+    /*border: 1px dotted #aaa;*/
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: #000;
-    color: #aaa;
+    color: #eee;
     font: 15px/1.5 Arial, Helvetica, sans-serif;
     /*
     font-size: 15px;
@@ -15,70 +19,108 @@ body {
     */
 }
 
-.main-container {
-    background-color: #454343; /* graphite */
-    width: 80%;
-    min-height: 600px;
-    margin: auto;
-    overflow: hidden;
+a {
+    color: #eee;
+    text-decoration: none;
 }
 
-.container {
+.main-container {
+    background-color: #454343; /* graphite */
+/*    width: 80%;
+    min-height: 600px;
+    margin: auto;
+    overflow: hidden;*/
+}
+
+/*.container {
     width: 90%;
     margin: auto;
     display: flex;
-    /* flex-direction: row; row-reverse|column|column-reverse*/
-    /* flex-wrap: nowrap; wrap - columns from right go down
-                            |wrap-reverse - columns from rigt go up */
-    /* !!! */
-    /* flex-flow: <'flex-direction'> || <'flex-wrap'> shortheand both above 
-            e.g. flex-flow: row nowrap; */
-    /* !!! */
-    /*justify-content: flex-start; default; space-between|centre|... */        
-    /*align-items: baseline|flex-start|flex-end|center|stretch stretch verically*/
+     flex-direction: row; row-reverse|column|column-reverse
+     flex-wrap: nowrap; wrap - columns from right go down
+                            |wrap-reverse - columns from rigt go up 
+     !!! 
+     flex-flow: <'flex-direction'> || <'flex-wrap'> shortheand both above 
+            e.g. flex-flow: row nowrap; 
+     !!! 
+    justify-content: flex-start; default; space-between|centre|...         
+    align-items: baseline|flex-start|flex-end|center|stretch stretch verically
     
-    /* this property has no effect when there is only one line of flex items */
-    /*align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe*/
+     this property has no effect when there is only one line of flex items 
+    align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe
     
 
-}
-.column-8 {
-    width: 80%;
-}
-.column-6 {
-    width: 60%
-}
-.column-5 {
-    width: 50%;
-}
-
-.column-4 {
-    width: 40%;
-}
-
-.column-2 {
-    width: 20%;
-}
+}*/
 
 .border {
     border: 1px dotted #aaa;
 }
 
 header {
-    min-height: 170px;
-}
-
-header {
-    width: 100%;
+    min-height: 120px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;   
+    align-items: center;
+    border-bottom: 1px dotted #aaa;
 }
 
-header h1 {
+.find-input, .login-register {
     margin: 0;
-    padding: 0;
+    padding: 10px 20px;
 }
 
-.main-content {
-    min-height: 400px;
+.find-input {
+    border-bottom: 1px dotted #aaa;        
+}
+
+.top-bar-container {
+    border-bottom: 1px dotted #aaa;
+    padding: 5px;
+}
+
+.left-bar {
+    border-bottom: 1px dotted #aaa;    
+}
+.left-bar, .main-content {
+    padding: 10px;
+}
+footer {
+    padding: 5px;
+    border-top: 1px dotted #aaa;
+}
+@media screen and (min-width: 768px) {
+    .top-bar-container {
+        display: flex;
+    }
+
+    .find-input, .login-register {
+        flex: 1;
+    }
+    .find-input {
+        border-bottom: 0;        
+    }
+    
+    .login-register {
+        margin: 0 20px 0 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .main-content-container {
+        display: flex;
+    }
+    
+    .left-bar {
+        border-bottom: 0;    
+        border-right: 1px dotted #aaa;    
+        flex: 0 0 200px;
+    }
+    .main-content {
+        flex: 1;
+    }
+    
+    #login-link, #register-link {
+        padding: 0 0 0 10px;
+    }
+
 }
